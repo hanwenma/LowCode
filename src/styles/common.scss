@@ -1,0 +1,19 @@
+#app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.material,
+.editor {
+  width: 270px;
+  overflow-y: auto;
+  background: peachpuff;
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+}
