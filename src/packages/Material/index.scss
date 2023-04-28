@@ -1,3 +1,20 @@
 .material{
-    
+    .material-item{
+        margin: 10px;
+        background-color: #f5f6f7;
+        border: 1px solid #0389f7;
+        border-radius: 5px;
+        font-size: 14px;
+        &_lable{
+            background-color: rgb(0, 132, 255);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        &_comp{
+            padding: 20px 5px 28px 5px;
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

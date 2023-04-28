@@ -2,6 +2,7 @@
 import Material from '@packages/Material'
 import Content from '@packages/Content'
 import Editor from '@packages/Editor'
+
 </script>
 
 <template>

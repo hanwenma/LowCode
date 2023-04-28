@@ -14,6 +14,8 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@packages': path.resolve(__dirname, 'src/packages'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
     },
   },
   plugins: [

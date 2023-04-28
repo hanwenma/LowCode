@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
-import '@styles/index.scss'
+import materialInit from '@utils/materialInit'
 import App from './App.vue'
+import 'element-plus/dist/index.css'
+import '@styles/index.scss'
 
-createApp(App).mount('#app')
+createApp(App).use(materialInit).mount('#app')
