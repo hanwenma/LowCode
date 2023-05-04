@@ -1,12 +1,14 @@
 import { defineComponent, inject, ref } from 'vue'
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'
 import Menu from '@packages/Menu'
+import Block from '@packages/Block'
 import './index.scss'
 
 export default defineComponent({
   name: 'Content',
   components: {
     Menu,
+    Block
   },
   props: {},
   setup() {
@@ -33,10 +35,8 @@ export default defineComponent({
       components.value.push({
         ...currComponent,
         key: uuidv4(),
-        attribute: {
-          left: e.target.clientX,
-          top: e.target.clientY,
-        },
+        left: e.offsetX,
+        top: e.offsetY,
       })
     }
 
@@ -50,10 +50,8 @@ export default defineComponent({
       >
         <Menu />
         <div class="content-components">
-          {components.value.map((compo) => (
-            <div class="content-components_item" key={compo.key} {...compo.attribute}>
-              {compo.render()}
-            </div>
+          {components.value.map((component) => (
+            <Block v-model={component} />
           ))}
         </div>
       </div>
