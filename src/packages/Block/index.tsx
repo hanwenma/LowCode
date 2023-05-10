@@ -18,7 +18,7 @@ export default defineComponent({
 
     return () => (
       <div
-        class="block-components_item"
+        class={`block-components_item ${props.modelValue.focus ? 'focus' : ''}`}
         ref={blockRef}
         key={props.modelValue.key}
         style={{
